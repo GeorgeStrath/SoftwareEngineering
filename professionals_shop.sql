@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 22, 2018 at 04:34 PM
+-- Generation Time: Sep 24, 2018 at 11:27 AM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `software engineering`
+-- Database: `employee`
 --
 
 -- --------------------------------------------------------
@@ -29,10 +29,22 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admin_details` (
-  `first_name` varchar(100) NOT NULL,
-  `last_name` varchar(100) NOT NULL,
-  `password` varchar(50) NOT NULL
+  `admin_id` int(8) NOT NULL,
+  `first_name` text NOT NULL,
+  `last_name` text NOT NULL,
+  `password` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin_details`
+--
+
+INSERT INTO `admin_details` (`admin_id`, `first_name`, `last_name`, `password`) VALUES
+(0, '', '', ''),
+(12340001, 'George', 'Ng\'ang\'a', '12340001'),
+(12340002, 'Purity', 'Jelimo', '12340002'),
+(12340003, 'Magnus', 'Wangari', '12340003'),
+(12340004, 'Dennis', 'Macharia', '12340004');
 
 -- --------------------------------------------------------
 
@@ -77,6 +89,28 @@ CREATE TABLE `employer_details` (
   `location` varchar(50) NOT NULL,
   `category` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admin_details`
+--
+ALTER TABLE `admin_details`
+  ADD PRIMARY KEY (`admin_id`);
+
+--
+-- Indexes for table `employee_details`
+--
+ALTER TABLE `employee_details`
+  ADD PRIMARY KEY (`employee_id`);
+
+--
+-- Indexes for table `employer_details`
+--
+ALTER TABLE `employer_details`
+  ADD PRIMARY KEY (`employer_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
