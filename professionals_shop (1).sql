@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 24, 2018 at 11:27 AM
+-- Generation Time: Sep 27, 2018 at 12:14 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `employee`
+-- Database: `professionals_shop`
 --
 
 -- --------------------------------------------------------
@@ -40,7 +40,6 @@ CREATE TABLE `admin_details` (
 --
 
 INSERT INTO `admin_details` (`admin_id`, `first_name`, `last_name`, `password`) VALUES
-(0, '', '', ''),
 (12340001, 'George', 'Ng\'ang\'a', '12340001'),
 (12340002, 'Purity', 'Jelimo', '12340002'),
 (12340003, 'Magnus', 'Wangari', '12340003'),
