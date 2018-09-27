@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login page</title>
+    <meta charset="utf-8">
+</head>
+
+<style>
+    @import url('https://fonts.googleis.com/css?family=Pacifico|Rock+Salt');
+    html,
+    body,
+    section {
+        height: 100% ;
+
+    }
+
+    body {
+        color: #fff;
+        text-align: center;
+    }
+
+    .xop-container {
+        display: flex;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .xop-left {
+        background: linear-gradient(rgba(0,0,0,0.85), rgba(255,255,255,0.10)), url(wspace.jpg);
+        background-size: cover;
+        flex: 1;
+        padding: 1rem;
+        transition: all .2s ease-in-out;
+
+    }
+
+    .xop-right {
+        background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(164, 222, 102, 0.10)), url();
+        background-size: cover;
+        flex: 1;
+        padding: 1rem;
+        transition: all.2s ease-in-out;
+    }
+
+    .xop-left:hover,
+    .xop-right:hover {
+        transform: scale(0.95);
+
+    }
+
+    .xop-left h1 {
+        font-family: 'Rock Salt', cursive;
+        font-size: 6rem;
+    }
+
+    .xop-right h1 {
+        font-family: 'Pacifico', cursive;
+        font-size: 4rem;
+        color:skyblue;
+    }
+
+    .xop-button {
+        border-radius: 30px;
+        color: #fff;
+        background-color: #fcad26;
+        padding: 1.5%;
+        margin: 0.2%;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        width: 150px;
+    }
+
+    .xop-button:hover {
+        background-color: #fcc567;
+
+    }
+    .loginbox{
+         font-size: 22px;
+        color:skyblue;
+    }
+
+</style>
+
+
+<body>
+
+    <section class="xop-container">
+
+        <div class="xop-left">
+            <article>
+                <h1>PROFESSIONALS SHOP</h1>
+            </article>
+        </div>
+        <div class="xop-right">
+
+            <article>
+                <h1>
+                    LOGIN
+
+                </h1>
+
+
+            </article>
+<div class=loginbox>
+            <form action="" method="post">
+                
+                <p>Username </p>
+                <input type="text" name="username" placeholder="Enter Username">
+                <P>Password</P>
+                <input type="password" name="pass" placeholder="Enter Password">
+                <input type="submit" name="" value="login">
+
+
+            </form>
+
+            </div>
+        </div>
+
+
+    </section>
+
+
+</body>
+
+
+
+
+
+</html>
