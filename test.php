@@ -18,11 +18,11 @@
 
 		if($queryResults > 0) {
 			while($row = mysqli_fetch_assoc($result)) {
-				echo "<div>
+				echo "<div><p></p>
 					 <p>".$row['admin_id']."</p>
-					 <p>".$row['first_name']. 
+					 <p>".$row['first_name'] . 
 					 $row['last_name']."</p>
-					 <br><br>
+					 <br>
 				</div>"	;
 			}
 		}
