@@ -10,33 +10,35 @@ session_start();
 		//Error handlers
 		//Check for empty fields
 		if(empty($first) ||empty($last) ||empty($password)){
-			header("Location: ../Signup.php?Signup=empty");
+			header("Location: login.html?login=empty");
 			exit();
 		}else{
 			$sql = "SELECT * FROM admin_details WHERE first_name = '$first' AND last_name = '$last'";
-			$result = mysqli-query($conn, $sql);
+			$result = mysqli_query($conn, $sql);
 			$resultcheck = mysqli_num_rows($result);
 			if($resultcheck < 1){
-				header("Location: ../login.php?login=error");
+				header("Location: login.php?login=error");
 				exit();
 			}else{
-				if($row = mysqli_fetch_assoc($result)){
-					//De-hashing the password
-					$hashedPasswordCheck = password_verify($password,$row['password']);
-					header("Location: ../Signup.php?Signup=error");
-					exit();
-				}elseif($hashedPasswordCheck == true){
+				while($row = mysqli_fetch_assoc($result)){
+					//Storing in new variables
+					$dbfirst = $row['first_name'];
+					$dblast = $row['last_name'];
+					$dbpassword = $row['password'];
+				}
+				if($dbfirst == $first && $dblast == $dblast && $dbpassword == $password){
 					// Log in the user here
 					$_SESSION['a_first'] = $row['first_name'];
 					$_SESSION['a_last'] = $row['last_name'];
-					header("Location: ../Signup.php?Signup=success");
+					$_SESSION['a_password'] = $row ['password'];
+					header("Location: professionalShop.html?login=success");
 					exit();
 				}
 			}
 		}
 
 	}else{
-		header("Location: ../Login.php?login=error");
+		header("Location: login.php?login=error");
 		exit();
 	}
 

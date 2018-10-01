@@ -1,10 +1,11 @@
 <?php
 
-if (isset(&_POST['submit'])){
+if (isset($_POST['submit'])){
 	session_start();
 	session_unset();
 	session_destroy();
-	header("Location:../Login.php");
+
+	header("Location: login.html=logged out");
 	exit();
 }
 ?>
