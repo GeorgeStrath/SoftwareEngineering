@@ -3,10 +3,7 @@
 	include 'header.php';
 ?>
 
-<form action="search.php" method="POST">
-	<input type="text" name="search" placeholder="Search">
-	<button type='submit' name='submit-search'>Search</button>
-</form>
+
 
 <h1>Admin details</h1>
 <h2>Admins:</h2>

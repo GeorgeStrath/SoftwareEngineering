@@ -1,5 +1,25 @@
+body{
+	background-color: lightblue;
+	font-family: arial;
+}
 .admin-list{
-	background-color: lightgrey;
+	background-color: ghostwhite;
 	border-radius: 5px; 
-	width: 15%; 
+	width: 55%; 
+	padding: 30px;
+}
+.admin-box {
+	padding-bottom: 30px;
+	width: 100%; 
+}
+input {
+	padding: 0px;
+	width: 300px;
+	height: 40px;
+	font-size: 22px;
+}
+button {
+	width: 100px;
+	height: 40px;
+	font-size: 22px;
 }
