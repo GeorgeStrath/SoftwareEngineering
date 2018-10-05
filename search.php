@@ -17,7 +17,9 @@
 
 		if ($queryResult > 0) {
 			while($row = mysqli_fetch_assoc($result)) {
-				echo "<a href='admin.php?title=".$row['admin_id']."'><div class='admin-box'><p></p>
+				echo 
+					"<a href='admin.php?title=".$row['admin_id']."'><div class='admin-box'><p></p>
+					 <img class='dp'height='200px' width='160px' src='".$row['admin_photo']."'>
 					 <h3>".$row['admin_id']."</h3>
 					 <p>".$row['first_name' ] . 
 					 $row['last_name']."</p>

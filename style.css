@@ -1,6 +1,5 @@
 body{
 	background-color: lightblue;
-	font-family: arial;
 }
 .admin-list{
 	background-color: ghostwhite;
@@ -10,7 +9,7 @@ body{
 }
 .admin-box {
 	padding-bottom: 30px;
-	width: 100%; 
+	width: 10%; 
 }
 input {
 	padding: 0px;
@@ -22,4 +21,8 @@ button {
 	width: 100px;
 	height: 40px;
 	font-size: 22px;
+}
+.dp {
+	height: 100px;
+	width: 60px;
 }

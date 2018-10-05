@@ -9,7 +9,9 @@
 <h2>Admins:</h2>
 <div class = 'admin-list'>
 	<?php
-		$sql = "SELECT * FROM admin_details";
+		$id = mysqli_real_escape_string($conn, $_GET['title']);
+
+		$sql = "SELECT * FROM admin_details WHERE admin_id = '$id'";
 		$result = mysqli_query($conn, $sql);
 		$queryResults = mysqli_num_rows($result);
 
