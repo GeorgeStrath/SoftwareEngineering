@@ -1,0 +1,28 @@
+body{
+	background-color: lightblue;
+}
+.admin-list{
+	background-color: ghostwhite;
+	border-radius: 5px; 
+	width: 55%; 
+	padding: 30px;
+}
+.admin-box {
+	padding-bottom: 30px;
+	width: 10%; 
+}
+input {
+	padding: 0px;
+	width: 300px;
+	height: 40px;
+	font-size: 22px;
+}
+button {
+	width: 100px;
+	height: 40px;
+	font-size: 22px;
+}
+.dp {
+	height: 100px;
+	width: 60px;
+}

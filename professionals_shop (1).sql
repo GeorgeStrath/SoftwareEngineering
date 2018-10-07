@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 24, 2018 at 11:27 AM
+-- Generation Time: Sep 27, 2018 at 12:14 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `employee`
+-- Database: `professionals_shop`
 --
 
 -- --------------------------------------------------------
@@ -40,7 +40,6 @@ CREATE TABLE `admin_details` (
 --
 
 INSERT INTO `admin_details` (`admin_id`, `first_name`, `last_name`, `password`) VALUES
-(0, '', '', ''),
 (12340001, 'George', 'Ng\'ang\'a', '12340001'),
 (12340002, 'Purity', 'Jelimo', '12340002'),
 (12340003, 'Magnus', 'Wangari', '12340003'),
@@ -59,11 +58,11 @@ CREATE TABLE `employee_details` (
   `date_of_birth` date NOT NULL,
   `photo` blob NOT NULL,
   `id_number` int(8) NOT NULL,
-  `portfolio` varchar(100) NOT NULL,
-  `email_address` varchar(50) NOT NULL,
-  `password` varchar(8) NOT NULL,
-  `location` varchar(50) NOT NULL,
-  `license` varchar(100) NOT NULL,
+  `portfolio` varchar(256) NOT NULL,
+  `email_address` varchar(256) NOT NULL,
+  `password` varchar(256) NOT NULL,
+  `location` varchar(256) NOT NULL,
+  `license` varchar(256) NOT NULL,
   `skill` text NOT NULL,
   `phone_number` int(10) NOT NULL,
   `category` text NOT NULL,
@@ -83,10 +82,10 @@ CREATE TABLE `employer_details` (
   `last_name` text NOT NULL,
   `photo` blob NOT NULL,
   `id_number` int(8) NOT NULL,
-  `email_address` varchar(50) NOT NULL,
-  `password` varchar(8) NOT NULL,
+  `email_address` varchar(256) NOT NULL,
+  `password` varchar(256) NOT NULL,
   `phone_number` int(10) NOT NULL,
-  `location` varchar(50) NOT NULL,
+  `location` varchar(256) NOT NULL,
   `category` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
