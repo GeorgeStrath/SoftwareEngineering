@@ -4,12 +4,11 @@ body{
 .admin-list{
 	background-color: ghostwhite;
 	border-radius: 5px; 
-	width: 55%; 
+	width: 75%; 
 	padding: 30px;
 }
 .admin-box {
 	padding-bottom: 30px;
-	width: 10%; 
 }
 input {
 	padding: 0px;
@@ -25,4 +24,11 @@ button {
 .dp {
 	height: 100px;
 	width: 60px;
+}
+.profile_preview_form {
+	width: 90%;
+	margin-right: 50px;
+	margin-bottom: 60px;
+	background-color: lightgrey;
+
 }

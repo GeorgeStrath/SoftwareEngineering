@@ -18,12 +18,11 @@
 
 		if($queryResults > 0) {
 			while($row = mysqli_fetch_assoc($result)) {
-				echo "<div class='admin-box'><p></p>
+				echo "<div class='admin-box'>
 					 <img height='200px' width='160px' src='".$row['admin_photo']."'>
 					 <h3>".$row['admin_id']."</h3>
 					 <p>".$row['first_name'] . 
-					 $row['last_name']."</p>
-					 <br>
+					 $row['last_name']."</p><hr>
 				</div>"	;
 			}
 		}
