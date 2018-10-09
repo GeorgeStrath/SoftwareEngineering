@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 27, 2018 at 12:14 PM
+-- Generation Time: Oct 09, 2018 at 09:54 AM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin_details` (
   `admin_id` int(8) NOT NULL,
+  `admin_photo` varchar(1000) NOT NULL,
   `first_name` text NOT NULL,
   `last_name` text NOT NULL,
   `password` varchar(8) NOT NULL
@@ -39,11 +40,11 @@ CREATE TABLE `admin_details` (
 -- Dumping data for table `admin_details`
 --
 
-INSERT INTO `admin_details` (`admin_id`, `first_name`, `last_name`, `password`) VALUES
-(12340001, 'George', 'Ng\'ang\'a', '12340001'),
-(12340002, 'Purity', 'Jelimo', '12340002'),
-(12340003, 'Magnus', 'Wangari', '12340003'),
-(12340004, 'Dennis', 'Macharia', '12340004');
+INSERT INTO `admin_details` (`admin_id`, `admin_photo`, `first_name`, `last_name`, `password`) VALUES
+(12340001, 'Mwaniki.jpg', 'George ', ' Ng\'ang\'a', '12340001'),
+(12340002, 'Purity.jpg', 'Purity ', 'Jelimo', '12340002'),
+(12340003, 'Magnus.jpg', 'Magnus ', 'Wangari', '12340003'),
+(12340004, 'Macho.jpg', 'Dennis ', 'Macharia', '12340004');
 
 -- --------------------------------------------------------
 
@@ -53,22 +54,28 @@ INSERT INTO `admin_details` (`admin_id`, `first_name`, `last_name`, `password`) 
 
 CREATE TABLE `employee_details` (
   `employee_id` int(8) NOT NULL,
-  `first_name` text NOT NULL,
-  `last_name` text NOT NULL,
+  `full_names` text NOT NULL,
   `date_of_birth` date NOT NULL,
-  `photo` blob NOT NULL,
+  `photo` varchar(125) NOT NULL,
   `id_number` int(8) NOT NULL,
-  `portfolio` varchar(256) NOT NULL,
-  `email_address` varchar(256) NOT NULL,
-  `password` varchar(256) NOT NULL,
-  `location` varchar(256) NOT NULL,
-  `license` varchar(256) NOT NULL,
+  `portfolio` varchar(100) NOT NULL,
+  `email_address` varchar(50) NOT NULL,
+  `password` varchar(8) NOT NULL,
+  `location` varchar(50) NOT NULL,
+  `license` varchar(100) NOT NULL,
   `skill` text NOT NULL,
-  `phone_number` int(10) NOT NULL,
+  `phone_number` varchar(15) NOT NULL,
   `category` text NOT NULL,
   `rate` int(1) NOT NULL,
   `comment` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `employee_details`
+--
+
+INSERT INTO `employee_details` (`employee_id`, `full_names`, `date_of_birth`, `photo`, `id_number`, `portfolio`, `email_address`, `password`, `location`, `license`, `skill`, `phone_number`, `category`, `rate`, `comment`) VALUES
+(50000001, 'Test One', '1999-01-01', 'Magnus.jpg', 12000000, 'guess who I am', 'test.one@gmail.com', '12340003', 'Kiambu', 'Sina Priss', 'Farmer', '+254788229272', 'Employee', 1, 'Poor woman from Kiambu doesn\'t know anything!');
 
 -- --------------------------------------------------------
 
@@ -82,10 +89,10 @@ CREATE TABLE `employer_details` (
   `last_name` text NOT NULL,
   `photo` blob NOT NULL,
   `id_number` int(8) NOT NULL,
-  `email_address` varchar(256) NOT NULL,
-  `password` varchar(256) NOT NULL,
+  `email_address` varchar(50) NOT NULL,
+  `password` varchar(8) NOT NULL,
   `phone_number` int(10) NOT NULL,
-  `location` varchar(256) NOT NULL,
+  `location` varchar(50) NOT NULL,
   `category` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -110,6 +117,22 @@ ALTER TABLE `employee_details`
 --
 ALTER TABLE `employer_details`
   ADD PRIMARY KEY (`employer_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `employee_details`
+--
+ALTER TABLE `employee_details`
+  MODIFY `employee_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `employer_details`
+--
+ALTER TABLE `employer_details`
+  MODIFY `employer_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12345000;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
