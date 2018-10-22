@@ -13,7 +13,8 @@
 
         <?php } ?>
 		
-		<div class="jumbotron text-center"><h1>Your data</h1></div>
+		<div class="jumbotron text-center"><h1>Your data</h1>
+			<h3>Let's improve your profile</h3></div>
 	<div class="row">
 		<div class="col-md-6 offset-md-3">
 			<form method="POST" action="<?php echo base_url()?>enter/updateyee/" enctype="multipart/form-data">
@@ -33,7 +34,7 @@
 					<input type="text" name="idnum" value="<?php echo $row['id_number'];?>"   class="form-control"required ><br>
 					Email Address<br>	
 					<input type="text" name="email" value="<?php echo $row['email_address'];?>"class="form-control" required readonly><br>
-					Portfolio(tell me everything about you carrer)<br>	
+					Portfolio(tell me everything about you career)<br>	
 					<input type="text" name="portfolio" value="<?php echo $row['portfolio'];?>"   class="form-control" required><br>
 					Location<br>	
 					<input type="text" name="location" value="<?php echo $row['location'];?>"   class="form-control" required><br>

@@ -35,7 +35,7 @@
 <body>
 	<div class="row">
 		<div class="col-md-12 " id="bgimage"><div class="row text-center"><h1 style="margin-left: 505px;"> Welcome,<?php echo $this->session->userdata('username');?></h1>
-			<button class="btn btn-outline-light" style="margin-left: 429px;"><a href="<?php echo base_url()?>enter/logout" style="text-decoration: none; color: black;">Logout</a></button>
+			<button class="btn btn-outline-light" style="margin-left: 410px;"><a href="<?php echo base_url()?>enter/logout" style="text-decoration: none; color: black;">Logout</a></button>
 			<button class="btn btn-outline-light" style="margin-left: 2px;"><a href=""><i class="fa fa-cog fa-spin" style="color: black"></i></a></button>
 				</div>
 			<form id="formstyle" method="POST" action="<?php echo base_url();?>action/search">
