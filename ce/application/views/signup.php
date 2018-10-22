@@ -96,7 +96,8 @@
     input[type=email],
      input[type=date],
     input[type=text],
-    input[type=password] {
+    input[type=password],
+    input[type=number] {
         width:70%;
         padding: 5px 5px;
         margin: 1px 0;
@@ -123,6 +124,13 @@
 
 
 <body>
+    <?php if ($this->session->flashdata('user_signup_failed')){?>
+            <?php echo "<div class='alert alert-danger alert-dismissible fade show'> 
+            <button class='close' type='button' data-dismiss='alert'>x</button>
+            ".$this->session->flashdata('user_signup_failed')."
+            </div>"; ?>
+
+        <?php } ?>
 
     <section class="xop-container">
 
@@ -139,34 +147,34 @@
 
                 </h1>
             </article>
+            <br><br><br>
             <div class=loginbox>
-                <form action="employee.signup.con.php" method="post">
 
+                
+                    <?php echo validation_errors();?>
 
-                    <p><label for="firstname">First name: </label></p>
-                    <p><input type="text" name=first_name id="firstname" required></p>
-                    <P><label for="lastname">Last name: </label></P>
-                                <p><input type="text" name=last_name id="lastname" required>
-                                    <p><label for="email">Email: </label>
-                                        <p><input type="email" name=email id="email" required>
-                                            <p><label for="date">Date of Birth: </label>
-                                                                        <p><input type="date" name=date placeholder="dd\mm\yy">
-                                                                            </p>
-                                            <P> Gender:</P>
-                                <p><input type="radio" name=gender value="male" required> Male</p>
-                                <p><input type="radio" name=gender value="female" required> Female</p>
-                    <P><label for="skill">Skill/Profession: </label></P>
-                                <p><input type="text" name=profession id="prof" required>
-                                     <P> Category:</P>
-                                <p><input type="radio" name=category value="individual" required> Individual</p>
-                                <p><input type="radio" name=category value="org" required> Organisation</p>
-                                                    <p><label for="password">Password: </label>
-                                                        <p><input type="password" name=password id="pass" required>
-                                                            <p><label for="password"> Confirm Password: </label>
-                                <p><input type="password" name=vpassword id="pass" required></p>
+                    <form action="<?php echo base_url();?>homecnt/employeedash" method="POST" enctype="multipart/form-data">
+                                <p>Full name</p>
+                                <input type="text" name="fullnames" id="fullnames" placeholder="Enter your fullnames" required><br>
+                                <p>Date of Birth</p>
+                                <input type="date" name="dob" id="dob" placeholder="Enter your Date of birth" required><br>
+                                <p>Id number</p>
+                                <input type="number" name="idnum" id="idnum" placeholder="Enter your id number" required><br>
+                                <p>Email address</p>
+                                <input type="email" name="email" id="email" placeholder="Enter your email address" required><br>
+                                <p>Password</p>
+                                <input type="password" name="pass" placeholder="Enter a password" required><br>
+                                <p>Confirm your password</p>
+                                <input type="password" name="vpass" placeholder="Re-type password" required><br>
+                                <p>What type of employee are you</p>
+                                <select class="form-control" name="typeofemployee" required>
+                                    <option>Individual</option>
+                                    <option>Organisation</option>
+                                </select><br>
+
                                                                      
                                 <p><input type="submit" value="Submit" class="btn btn-primary"></p>
-                                                                                <p><input type="reset" class="btn btn-primary"></p>
+                                <p><input type="reset" class="btn btn-primary"></p><br>
 
 
                 </form>
